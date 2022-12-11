@@ -34,8 +34,7 @@ Y = data.A
 #X_train_val, X_test, y_train_val, y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
 #X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=0.25, random_state=0)
 xgb_cv = XGBRegressor(colsample_bytree=1.0, learning_rate=0.01, max_depth=7,
-             min_child_weight=3, n_estimators=500, objective='reg:squarederror',eval_metric='mae',verbose=False,
-             subsample=1.0)
+             min_child_weight=3, n_estimators=500, objective='reg:squarederror',eval_metric='mae',subsample=1.0)
 
 fit_model = xgb_cv.fit(
     X,
