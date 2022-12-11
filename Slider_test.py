@@ -6,9 +6,8 @@ Created on Thu Dec  8 14:19:23 2022
 """
 import streamlit as st
 import pandas as pd
-#import PIL
-#from PIL import Image
 import xgboost as xgb
+import cv2
 
 st.markdown("""
 # CO$_2$ Assimilation Prediction app
@@ -18,8 +17,9 @@ st.markdown("""
 #### You can use this application to match the type of plant with the highest potential for reducing the levels of PAH in the room.
 #### Alternatively, you can get a quantitative estimate of the amount of CO$_2$ levels that the plants reduce indoor	:full_moon_with_face:)
 """)
-#image = Image.open(r"C:\downloads_py\Streamlit\Images\gw_image.jpg")
-#st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
+image = cv2.imread(r"C:\downloads_py\Streamlit\Images\gw_image.jpg")
+image = image[...,::-1]
+st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
 
 
 st.sidebar.header('User Input Parameters')
@@ -42,10 +42,11 @@ df = user_input_features()
 
 st.subheader('User Input parameters')
 st.write(df)
-st.write(st.__version__)
-st.write(pd.__version__)
-st.write(xgb.__version__)
-
+st.write("st",st.__version__)
+st.write("pd",pd.__version__)
+st.write("xgb",xgb.__version__)
+st.write("cv",cv2.__version__)
+#st.write(matplotlib.__version__)
 
 #image1 = Image.open(r"C:\downloads_py\Streamlit\Images\Tradescantia.jpg")
 #image2 = Image.open(r"C:\downloads_py\Streamlit\Images\Peperomia.jpg")
