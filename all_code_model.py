@@ -4,6 +4,7 @@ Created on Sun Dec 11 17:25:48 2022
 
 @author: User
 """
+import numpy as np
 import streamlit as st
 import pandas as pd
 from xgboost import XGBRegressor
@@ -12,11 +13,12 @@ sns.set_theme(style="white",font_scale = 1)
 #import sklearn
 import PIL
 from PIL import Image
-from sklearn.model_selection import train_test_split
+import pickle
+#from sklearn.model_selection import train_test_split
 #from sklearn.model_selection import KFold
 #from sklearn.model_selection import cross_validate
 #from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-
+'''
 # read the data
 path = "Clean_data.xlsx"
 data = pd.read_excel(path)
@@ -48,7 +50,7 @@ fit_model = xgb_cv.fit(
   early_stopping_rounds=50,
   verbose=2
 )
-
+'''
 
 st.markdown("""
 # CO$_2$ Assimilation Prediction app
@@ -95,7 +97,10 @@ st.subheader('User Input parameters')
 st.write(df)
 
 # Prediction:
-prediction = fit_model.predict(df)
-import numpy as np
+with open("XGB.pkl", 'rb') as file:
+    model = pickle.load(file)
+
+prediction = model.predict(df)
+#prediction = fit_model.predict(df)
 st.subheader(f'$CO_2$ Assimilation rate prediction {np.round(prediction,2)} µmol m$^2 s^{-1}$')
 st.write(prediction)
