@@ -18,50 +18,7 @@ import pickle
 #from sklearn.model_selection import KFold
 #from sklearn.model_selection import cross_validate
 #from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-'''
-# read the data
-path = "Clean_data.xlsx"
-data = pd.read_excel(path)
-data = data[['A', 'Qin', 'Ca', 'RH','Species']]
-#data = data.sample(frac=1) # Shuffle the data 
 
-###### Define features and labels ######
-X = data[['Qin', 'Ca', 'RH','Species']]
-# Standardization:
-# X = (X-X.mean())/X.std() #standardization
-Y = data.A
-
-
-###### Split the data into train and test ######
-X_train_val, X_test, y_train_val, y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
-X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=0.25, random_state=0)
-eval_set = [(X_train, y_train),
-            (X_val, y_val)]
-
-xgb_cv = (colsample_bytree=1.0, learning_rate=0.01, max_depth=7,
-             min_child_weight=3, n_estimators=500, objective='reg:squarederror',
-             subsample=1.0)
-
-fit_model = xgb_cv.fit(
-    X_train_val,
-    y_train_val,
-  set_params=eval_set,
-  eval_metric='mae',
-  early_stopping_rounds=50,
-  verbose=2
-)
-'''
-
-st.markdown("""
-# CO$_2$ Assimilation Prediction app
-
-#### This app predicts the **CO$_2$ Assimilation** of 6 different indoor plants based on the internal enviroment conditions.
-
-#### You can use this application to match the type of plant with the highest potential for reducing the levels of PAH in the room.
-#### Alternatively, you can get a quantitative estimate of the amount of CO$_2$ levels that the plants reduce indoor	:full_moon_with_face:)
-""")
-#image = Image.open(r"C:\downloads_py\Streamlit\Images\gw_image.jpg")
-#st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
 
 
 st.sidebar.header('User Input Parameters')
