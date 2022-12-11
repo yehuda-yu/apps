@@ -1,4 +1,4 @@
-xgboost==1.6.0
+xgboost
 scikit-learn
 streamlit
 openpyxl
