@@ -16,13 +16,12 @@ sns.set_theme(style="white",font_scale = 1)
 #import sklearn
 #import PIL
 #from PIL import Image
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import KFold
-from sklearn.model_selection import cross_validate
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from xgboost import XGBRegressor
-from sklearn.model_selection import GridSearchCV
+#from sklearn.model_selection import train_test_split
+#from sklearn.linear_model import LinearRegression
+#from sklearn.model_selection import KFold
+#from sklearn.model_selection import cross_validate
+#from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+#from sklearn.model_selection import GridSearchCV
 
 # read the data
 path = "C:\downloads_py\Streamlit\Assimilation_model_data.xlsx"
