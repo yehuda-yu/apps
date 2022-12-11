@@ -43,7 +43,7 @@ xgb_cv = (colsample_bytree=1.0, learning_rate=0.01, max_depth=7,
 fit_model = xgb_cv.fit(
     X_train_val,
     y_train_val,
-  eval_set=eval_set,
+  set_params=eval_set,
   eval_metric='mae',
   early_stopping_rounds=50,
   verbose=2
