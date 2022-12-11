@@ -1,5 +1,5 @@
-xgboost
 scikit-learn
+xgboost
 streamlit
 openpyxl
 pandas
