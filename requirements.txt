@@ -4,3 +4,5 @@ streamlit
 openpyxl
 pandas
 seaborn
+pickle
+numpy
