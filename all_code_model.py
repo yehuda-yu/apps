@@ -46,7 +46,7 @@ fit_model = xgb_cv.fit(
   eval_set=eval_set,
   eval_metric='mae',
   early_stopping_rounds=50,
-  verbose=False
+  verbose=2
 )
 
 
