@@ -24,10 +24,10 @@ data = data[['A', 'Qin', 'Ca', 'RH','Species']]
 #data = data.sample(frac=1) # Shuffle the data 
 
 ###### Define features and labels ######
-X = data[['Ca','Qin','RH','Species']]
+X = data.drop('A)
 # Standardization:
 # X = (X-X.mean())/X.std() #standardization
-Y = data['A']
+Y = data.A
 
 
 ###### Split the data into train and test ######
