@@ -18,7 +18,7 @@ from sklearn.model_selection import train_test_split
 #from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # read the data
-path = r"C:\downloads_py\Streamlit\Clean_data.xlsx"
+path = "Clean_data.xlsx"
 data = pd.read_excel(path)
 data = data[['A', 'Qin', 'Ca', 'RH','Species']]
 #data = data.sample(frac=1) # Shuffle the data 
