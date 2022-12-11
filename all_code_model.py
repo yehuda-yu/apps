@@ -31,14 +31,19 @@ Y = data.A
 
 
 ###### Split the data into train and test ######
-#X_train_val, X_test, y_train_val, y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
-#X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=0.25, random_state=0)
+X_train_val, X_test, y_train_val, y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
+X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=0.25, random_state=0)
+eval_set = [(X_train, y_train),
+            (X_val, y_val)]
 xgb_cv = XGBRegressor(colsample_bytree=1.0, learning_rate=0.01, max_depth=7,
              min_child_weight=3, n_estimators=500, objective='reg:squarederror',eval_metric='mae',subsample=1.0)
 
 fit_model = xgb_cv.fit(
-    X,
-    Y,
+    X_train_val,
+    y_train_val,
+  eval_set=eval_set,
+  eval_metric='mae'
+  
 )
 
 
