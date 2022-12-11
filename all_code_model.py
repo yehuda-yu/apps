@@ -60,7 +60,8 @@ st.sidebar.header('User Input Parameters')
 
 def user_input_features():
     # Create a list of Species for the selectbox
-    Species = st.sidebar.select_slider("Species", options = ['Tradescantia', 'Peperomia', 'Spathiphyllum', 'Philodendron','Monalisa', 'Chlorophytum'])
+    #Species = st.sidebar.select_slider("Species", options = ['Tradescantia', 'Peperomia', 'Spathiphyllum', 'Philodendron','Monalisa', 'Chlorophytum'])
+    Species = st.sidebar.slider('Species', 0, 5, 0)
     Qin = st.sidebar.slider('Light Intensity (PAR)', 0, 1200, 70)
     Ca = st.sidebar.slider('Ambient CO_2 levels (ppm)', 0, 1500,400 )
     RH = st.sidebar.slider('Relative Humidity (%)', 20, 80, 60)
@@ -77,7 +78,7 @@ def user_input_features():
     'Philodendron':4,
     'Chlorophytum':5
     }
-    features['Species'] = features[features.columns[0]].replace(labels_dict_rev)
+    #features['Species'] = features[features.columns[0]].replace(labels_dict_rev)
     features = features[['Ca','Qin','RH','Species']]
 
     return features
