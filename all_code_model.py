@@ -24,7 +24,7 @@ sns.set_theme(style="white",font_scale = 1)
 #from sklearn.model_selection import GridSearchCV
 
 # read the data
-path = "C:\downloads_py\Streamlit\Assimilation_model_data.xlsx"
+path = "Assimilation_model_data.xlsx"
 data = pd.read_excel(path)
 data = data[['A', 'Qin', 'Ca', 'RH','Species']]
 
