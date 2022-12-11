@@ -14,9 +14,8 @@ from xgboost import XGBRegressor
 import seaborn as sns
 sns.set_theme(style="white",font_scale = 1)
 #import sklearn
-import pickle
-import PIL
-from PIL import Image
+#import PIL
+#from PIL import Image
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import KFold
@@ -88,8 +87,8 @@ st.markdown("""
 #### You can use this application to match the type of plant with the highest potential for reducing the levels of PAH in the room.
 #### Alternatively, you can get a quantitative estimate of the amount of CO$_2$ levels that the plants reduce indoor	:full_moon_with_face:)
 """)
-image = Image.open(r"C:\downloads_py\Streamlit\Images\gw_image.jpg")
-st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
+#image = Image.open(r"C:\downloads_py\Streamlit\Images\gw_image.jpg")
+#st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
 
 
 st.sidebar.header('User Input Parameters')
