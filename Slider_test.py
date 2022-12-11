@@ -4,10 +4,10 @@ Created on Thu Dec  8 14:19:23 2022
 
 @author: User
 """
-#import streamlit as st
-#import pandas as pd
-#import xgboost as xgb
-#import cv2
+import streamlit as st
+import pandas as pd
+import xgboost as xgb
+import cv2
 
 st.markdown("""
 # CO$_2$ Assimilation Prediction app
