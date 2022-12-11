@@ -77,7 +77,7 @@ def user_input_features():
     'Philodendron':4,
     'Chlorophytum':5
     }
-    features['Species'] = features['Species'].replace(labels_dict_rev)
+    features['Species'] = features[features.columns[0]].replace(labels_dict_rev)
     features = features[['Ca','Qin','RH','Species']]
 
     return features
