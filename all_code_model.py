@@ -21,7 +21,7 @@ import pandas as pd
 #X = data[['Ca','Qin','RH','Species']]
 # Standardization:
 # X = (X-X.mean())/X.std() #standardization
-Y = data.A
+#Y = data.A
 
 
 ###### Split the data into train and test ######
