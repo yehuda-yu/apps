@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 sns.set_theme(style="white",font_scale = 1)
-#import sklearn
+import sklearn
 #import PIL
 #from PIL import Image
 from sklearn.ensemble import RandomForestRegressor
