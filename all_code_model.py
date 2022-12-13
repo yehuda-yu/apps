@@ -1,27 +1,28 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 #import seaborn as sns
 #sns.set_theme(style="white",font_scale = 1)
-#import sklearn
+import sklearn
 #import PIL
 #from PIL import Image
-#from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor
 #from sklearn.model_selection import train_test_split
 #from sklearn.model_selection import KFold
 #from sklearn.model_selection import cross_validate
 #from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # read the data
-#path = "Clean_data.xlsx"
-#data = pd.read_excel(path)
-#data = data[['A', 'Qin', 'Ca', 'RH','Species']]
+path = "Clean_data.xlsx"
+data = pd.read_excel(path)
+data = data[['A', 'Qin', 'Ca', 'RH','Species']]
 #data = data.sample(frac=1) # Shuffle the data 
 
 ###### Define features and labels ######
-#X = data[['Ca','Qin','RH','Species']]
+X = data[['Ca','Qin','RH','Species']]
 # Standardization:
 # X = (X-X.mean())/X.std() #standardization
-#Y = data.A
+Y = data.A
 
 
 ###### Split the data into train and test ######
@@ -31,7 +32,7 @@ import pandas as pd
 #             min_child_weight=3, n_estimators=500, objective='reg:squarederror',
 #             subsample=1.0)
 
-#fit_model = RandomForestRegressor(max_depth=100, n_estimators=800).fit(X,Y)
+fit_model = RandomForestRegressor(max_depth=100, n_estimators=800).fit(X,Y)
 
 
 
@@ -79,7 +80,6 @@ st.subheader('User Input parameters')
 st.write(df)
 
 # Prediction:
-#prediction = fit_model.predict(df)
-#import numpy as np
-#st.subheader(f'$CO_2$ Assimilation rate prediction {np.round(prediction,2)} µmol m$^2 s^{-1}$')
+prediction = fit_model.predict(df)
+st.subheader(f'$CO_2$ Assimilation rate prediction {np.round(prediction,2)} µmol m$^2 s^{-1}$')
 #st.write(prediction)
