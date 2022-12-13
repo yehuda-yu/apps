@@ -34,13 +34,15 @@ Y = data.A
 
 fit_model = RandomForestRegressor(max_depth=100, n_estimators=800).fit(X,Y)
 
-# present the gw image
-image = Image.open("gw_image.jpg")
-st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
+
 
 st.markdown("""
 # CO$_2$ Assimilation Prediction app
-
+""")
+# present the gw image
+image = Image.open("gw_image.jpg")
+st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
+st.markdown("""
 #### This app predicts the **CO$_2$ Assimilation** of 6 different indoor plants based on the internal enviroment conditions based on AI algorithm.
 
 ##### you can get a quantitative estimate of the amount of CO$_2$ levels that the plants reduce indoor	
