@@ -37,7 +37,7 @@ fit_model = RandomForestRegressor(max_depth=100, n_estimators=800).fit(X,Y)
 
 
 st.markdown("""
-# CO$_2$ Assimilation Prediction app
+# CO$_2$ Assimilation Prediction App
 """)
 # present the gw image
 image = Image.open("gw_image.jpg")
