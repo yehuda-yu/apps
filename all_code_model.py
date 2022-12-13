@@ -43,10 +43,10 @@ st.markdown("""
 image = Image.open("gw_image.jpg")
 st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
 st.markdown("""
-#### This app predicts the **CO$_2$ Assimilation** of 6 different indoor plants based on the internal enviroment conditions based on AI algorithm.
+#### This app predicts the **CO$_2$ Assimilation** of 6 different indoor plants based on AI algorithm.
 
-##### you can get a quantitative estimate of the amount of CO$_2$ levels that the plants reduce indoor	
-##### Alternatively, you can use this application to match the type of plant with the highest potential for reducing the levels of CO$_2$ in the room :full_moon_with_face:)
+###### Use the slide bars to set your indoor condition and get a quantitative estimate of the amount of CO$_2$ levels that your plants reduce indoor.
+###### Alternatively, you can use this application to match the type of plant with the highest potential for reducing the levels of CO$_2$ in the room :full_moon_with_face:)
 """)
 
 
