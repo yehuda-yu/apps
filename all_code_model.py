@@ -41,7 +41,7 @@ st.markdown("""
 
 #### This app predicts the **CO$_2$ Assimilation** of 6 different indoor plants based on the internal enviroment conditions.
 
-#### You can use this application to match the type of plant with the highest potential for reducing the levels of PAH in the room.
+#### You can use this application to match the type of plant with the highest potential for reducing the levels of CO$_2$ in the room.
 #### Alternatively, you can get a quantitative estimate of the amount of CO$_2$ levels that the plants reduce indoor	:full_moon_with_face:)
 """)
 #image = Image.open(r"C:\downloads_py\Streamlit\Images\gw_image.jpg")
