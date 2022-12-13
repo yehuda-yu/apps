@@ -45,7 +45,7 @@ st.markdown("""
 #### Alternatively, you can get a quantitative estimate of the amount of CO$_2$ levels that the plants reduce indoor	:full_moon_with_face:)
 """)
 image = Image.open("gw_image.jpg")
-#st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
+st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
 
 
 st.sidebar.header('User Input Parameters')
