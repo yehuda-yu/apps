@@ -87,3 +87,4 @@ st.subheader(f'$CO_2$ Assimilation rate prediction {np.round(prediction,2)} µmo
 
 st.markdown(""" 
 Credit: [Yehuda Yungstein](mailto:yehudayu@gmail.com)
+""")
