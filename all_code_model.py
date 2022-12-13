@@ -5,7 +5,7 @@ import numpy as np
 #sns.set_theme(style="white",font_scale = 1)
 import sklearn
 import PIL
-#from PIL import Image
+from PIL import Image
 from sklearn.ensemble import RandomForestRegressor
 #from sklearn.model_selection import train_test_split
 #from sklearn.model_selection import KFold
