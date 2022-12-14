@@ -21,9 +21,11 @@ X = data[['Ca','Qin','RH','Species']]
 Y = data.A
 # Create model
 #fit_model = RandomForestRegressor(max_depth=100, n_estimators=800).fit(X,Y)
+
+
 # Load model:
-with open("RF.pkl", 'rb') as file:
-    fit_model = pickle.load(file)
+#with open("RF.pkl", 'rb') as file:
+ #   fit_model = pickle.load(file)
 
 
 st.markdown("""
