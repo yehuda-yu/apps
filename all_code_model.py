@@ -7,10 +7,6 @@ import sklearn
 import PIL
 from PIL import Image
 from sklearn.ensemble import RandomForestRegressor
-#from sklearn.model_selection import train_test_split
-#from sklearn.model_selection import KFold
-#from sklearn.model_selection import cross_validate
-#from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # read the data
 path = "Clean_data.xlsx"
@@ -23,17 +19,11 @@ X = data[['Ca','Qin','RH','Species']]
 # Standardization:
 # X = (X-X.mean())/X.std() #standardization
 Y = data.A
-
-
-###### Split the data into train and test ######
-#X_train_val, X_test, y_train_val, y_test = train_test_split(X, Y, test_size=0.2, random_state=0)
-#X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=0.25, random_state=0)
-#xgb_cv = XGBRegressor(colsample_bytree=1.0, learning_rate=0.01, max_depth=7,
-#             min_child_weight=3, n_estimators=500, objective='reg:squarederror',
-#             subsample=1.0)
-
-fit_model = RandomForestRegressor(max_depth=100, n_estimators=800).fit(X,Y)
-
+# Create model
+#fit_model = RandomForestRegressor(max_depth=100, n_estimators=800).fit(X,Y)
+# Load model:
+with open("RF.pkl", 'rb') as file:
+    fit_model = pickle.load(file)
 
 
 st.markdown("""
