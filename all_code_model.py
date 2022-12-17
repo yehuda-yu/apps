@@ -22,10 +22,6 @@ Y = data.A
 fit_model = RandomForestRegressor(max_depth=100, n_estimators=800).fit(X,Y)
 
 
-# Load model:
-#with open("RF.pkl", 'rb') as file:
- #   fit_model = pickle.load(file)
-
 
 st.markdown("""
 # CO$_2$ Assimilation Prediction App
@@ -100,6 +96,18 @@ max_index = predictions.index(max_value)
 # Find the species of the maximum value in the prediction list:
 top_species = species[max_index]
 st.subheader(f'Under this conditions, the best species for reduce CO$_2$ is {top_species}')
+
+##### Show image ot the species with highest assimilation rate ##### 
+images_dict = {
+'Tradescantia':"Images/Tradescantia.jpg",
+'Peperomia':"Images/Peperomia.jpg",
+'Spathiphyllum':"Images/Sphatophilum.jpg",
+'Monalisa':"Images/Monalisa.jpg",
+'Philodendron':"Images/Philodendron.jpg",
+'Chlorophytum':"Images/Chloropytum.jpg"
+}
+img = Image.open(images_dict[top_species]) # image based on top assimilation species
+st.image(img, caption=top_species)
 st.markdown(""" 
 Credit: [Yehuda Yungstein](mailto:yehudayu@gmail.com)
 """)
