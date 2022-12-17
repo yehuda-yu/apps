@@ -27,7 +27,7 @@ st.markdown("""
 # CO$_2$ Assimilation Prediction App
 """)
 # present the gw image
-image = Image.open("gw_image.jpg")
+image = Image.open("Images/gw_image.jpg")
 st.image(image, caption='Green Wall in The M&M VS Lab at the Hebrew University')
 st.markdown("""
 #### This app predicts the **CO$_2$ Assimilation** of 6 different indoor plants based on AI algorithm.
@@ -108,6 +108,8 @@ images_dict = {
 }
 img = Image.open(images_dict[top_species]) # image based on top assimilation species
 st.image(img, caption=top_species)
+
+# Credit header
 st.markdown(""" 
 Credit: [Yehuda Yungstein](mailto:yehudayu@gmail.com)
 """)
