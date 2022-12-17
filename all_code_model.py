@@ -44,6 +44,15 @@ st.markdown("""
 
 st.sidebar.header('User Input Parameters')
 
+#Dict for replace species name to number:
+labels_dict_rev = {
+'Tradescantia':0,
+'Peperomia':1,
+'Spathiphyllum':2,
+'Monalisa':3,
+'Philodendron':4,
+'Chlorophytum':5
+}
 def user_input_features():
     # Create a list of Species for the selectbox
     Species = st.sidebar.select_slider("Species", options = ['Tradescantia', 'Peperomia', 'Spathiphyllum', 'Philodendron','Monalisa', 'Chlorophytum'])
@@ -55,14 +64,6 @@ def user_input_features():
             'RH': RH,
             'Ca':Ca}
     features = pd.DataFrame(data, index=[0])
-    labels_dict_rev = {
-    'Tradescantia':0,
-    'Peperomia':1,
-    'Spathiphyllum':2,
-    'Monalisa':3,
-    'Philodendron':4,
-    'Chlorophytum':5
-    }
     features['Species'] = features['Species'].replace(labels_dict_rev)
     features = features[['Ca','Qin','RH','Species']]
 
@@ -75,9 +76,28 @@ st.write(df)
 
 # Prediction:
 prediction = fit_model.predict(df)
-st.subheader(f'$CO_2$ Assimilation rate prediction {np.round(prediction,2)} µmol m$^2 s^{-1}$')
+st.subheader(f'CO$_2$ Assimilation rate prediction {np.round(prediction,2)} µmol m$^2 s^{-1}$')
 #st.write(prediction)
 
-st.markdown(""" 
+
+##### Predict under this condition which species assimilate more CO2 ##### 
+
+st.sidebar.header('Which Species Is Better Under Your conditions?')
+# list of Species
+species = ['Tradescantia', 'Peperomia', 'Spathiphyllum', 'Philodendron','Monalisa', 'Chlorophytum']
+predictions = [] # empty list for prediction:
+# Predict assismilation rate for each species:
+for plant in species:
+ df['Species'] = df['Species'].replace(labels_dict_rev)
+ prediction = fit_model.predict(df)
+ predictions+= prediction
+# Find the maximum value in the list
+max_value = max(predictions)
+# Find the index of the maximum value in the prediction list
+max_index = predictions.index(max_value)
+# Find the species of the maximum value in the prediction list:
+top_species = species[max_index]
+st.subheader(f'Under this conditions, the best species for reduce CO$_2$ is {top_species}')
+ st.markdown(""" 
 Credit: [Yehuda Yungstein](mailto:yehudayu@gmail.com)
 """)
