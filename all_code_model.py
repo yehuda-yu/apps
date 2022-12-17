@@ -72,13 +72,13 @@ st.write(df)
 
 # Prediction:
 prediction = fit_model.predict(df)
-st.subheader(f'CO$_2$ Assimilation rate prediction {np.round(prediction,2)} µmol m$^2 s^{-1}$')
+st.write(f'CO$_2$ Assimilation rate prediction {np.round(prediction,2)} µmol m$^2 s^{-1}$')
 
 
 
 ##### Predict under this condition which species assimilate more CO2 ##### 
 
-st.sidebar.header('Which Species Is Better Under Your conditions?')
+st.subheader('Which Species Is Better Under Your conditions?')
 # list of Species
 species = ['Tradescantia', 'Peperomia', 'Spathiphyllum', 'Philodendron','Monalisa', 'Chlorophytum']
 predictions = [] # empty list for prediction:
