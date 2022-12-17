@@ -73,7 +73,7 @@ st.write(df)
 # Prediction:
 prediction = fit_model.predict(df)
 st.subheader(f'CO$_2$ Assimilation rate prediction {np.round(prediction,2)} µmol m$^2 s^{-1}$')
-#st.write(prediction)
+
 
 
 ##### Predict under this condition which species assimilate more CO2 ##### 
@@ -88,7 +88,7 @@ for plant in species:
   df['Species'] = df['Species'].replace(labels_dict_rev)
   prediction = fit_model.predict(df)
   predictions.append(prediction)
-st.write(predictions)
+
 # Find the maximum value in the list
 max_value = max(predictions)
 # Find the index of the maximum value in the prediction list
