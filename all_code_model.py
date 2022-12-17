@@ -91,6 +91,7 @@ for plant in species:
   df['Species'] = df['Species'].replace(labels_dict_rev)
   prediction = fit_model.predict(df)
   predictions+= prediction
+st.write(predictions)
 # Find the maximum value in the list
 max_value = max(predictions)
 # Find the index of the maximum value in the prediction list
