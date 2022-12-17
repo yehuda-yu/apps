@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 #import seaborn as sns
 #sns.set_theme(style="white",font_scale = 1)
-import sklearn
 import PIL
 from PIL import Image
 from sklearn.ensemble import RandomForestRegressor
@@ -20,7 +19,7 @@ X = data[['Ca','Qin','RH','Species']]
 # X = (X-X.mean())/X.std() #standardization
 Y = data.A
 # Create model
-#fit_model = RandomForestRegressor(max_depth=100, n_estimators=800).fit(X,Y)
+fit_model = RandomForestRegressor(max_depth=100, n_estimators=800).fit(X,Y)
 
 
 # Load model:
