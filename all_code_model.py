@@ -107,7 +107,7 @@ images_dict = {
 'Chlorophytum':"Images/Chloropytum.jpg"
 }
 img = Image.open(images_dict[top_species]) # image based on top assimilation species
-st.image(img, caption=top_species)
+st.image(img, caption=top_species,width=200)
 
 # Credit header
 st.markdown(""" 
