@@ -88,7 +88,7 @@ species = ['Tradescantia', 'Peperomia', 'Spathiphyllum', 'Philodendron','Monalis
 predictions = [] # empty list for prediction:
 # Predict assismilation rate for each species:
 for plant in species:
-  df['Species'] = df['Species'].replace(labels_dict_rev)
+  df['Species'] = plant.replace(labels_dict_rev)
   prediction = fit_model.predict(df)
   predictions+= prediction
 st.write(predictions)
