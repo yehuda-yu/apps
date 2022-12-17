@@ -95,7 +95,7 @@ max_value = max(predictions)
 max_index = predictions.index(max_value)
 # Find the species of the maximum value in the prediction list:
 top_species = species[max_index]
-st.write(f'Under this conditions, the best species for reduce CO$_2$ is {top_species} with {np.round(max_value,2)} µmol m$^2 s^{-1}$')
+st.write(f'Under this conditions, the best species for reduce CO$_2$ is {top_species} with {np.round(max_value[0],2)} µmol m$^2 s^{-1}$')
 
 ##### Show image ot the species with highest assimilation rate ##### 
 images_dict = {
