@@ -88,9 +88,9 @@ species = ['Tradescantia', 'Peperomia', 'Spathiphyllum', 'Philodendron','Monalis
 predictions = [] # empty list for prediction:
 # Predict assismilation rate for each species:
 for plant in species:
- df['Species'] = df['Species'].replace(labels_dict_rev)
- prediction = fit_model.predict(df)
- predictions+= prediction
+  df['Species'] = df['Species'].replace(labels_dict_rev)
+  prediction = fit_model.predict(df)
+  predictions+= prediction
 # Find the maximum value in the list
 max_value = max(predictions)
 # Find the index of the maximum value in the prediction list
@@ -98,6 +98,6 @@ max_index = predictions.index(max_value)
 # Find the species of the maximum value in the prediction list:
 top_species = species[max_index]
 st.subheader(f'Under this conditions, the best species for reduce CO$_2$ is {top_species}')
- st.markdown(""" 
+st.markdown(""" 
 Credit: [Yehuda Yungstein](mailto:yehudayu@gmail.com)
 """)
