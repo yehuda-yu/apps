@@ -108,7 +108,7 @@ images_dict = {
 }
 img = Image.open(images_dict[top_species]) # image based on top assimilation species
 st.image(img, caption=top_species,width=400)
-
+st.markdown(f'<p align="center"><img src="{img}" /></p>', unsafe_allow_html=True)
 # Credit header
 st.markdown(""" 
 Credit: [Yehuda Yungstein](mailto:yehudayu@gmail.com)
