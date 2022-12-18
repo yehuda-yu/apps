@@ -52,7 +52,7 @@ labels_dict_rev = {
 def user_input_features():
     # Create a list of Species for the selectbox
     options = ['Tradescantia', 'Peperomia', 'Spathiphyllum', 'Philodendron','Monalisa', 'Chlorophytum']
-    Species = st.sidebar.selectbox('Species:', options, default='Tradescantia')
+    Species = st.sidebar.selectbox('Species:', options)
     Qin = st.sidebar.slider('Light Intensity (PAR)', 0, 1200, 70)
     Ca = st.sidebar.slider('Ambient CO2 levels (ppm)', 0, 1500,400 )
     RH = st.sidebar.slider('Relative Humidity (%)', 20, 80, 60)
