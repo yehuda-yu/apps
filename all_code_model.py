@@ -38,7 +38,7 @@ st.markdown("""
 
 
 
-st.sidebar.header('User Input Parameters')
+st.sidebar.header('Input Your Conditions:')
 
 #Dict for replace species name to number:
 labels_dict_rev = {
@@ -79,7 +79,7 @@ st.write(f'CO$_2$ Assimilation rate prediction {np.round(prediction[0],2)} µmol
 
 ##### Predict under this condition which species assimilate more CO2 ##### 
 
-st.subheader('Which Species Is Better Under Your conditions?')
+st.subheader('Which Species Is Better Under Your Conditions?')
 # list of Species
 species = ['Tradescantia', 'Peperomia', 'Spathiphyllum', 'Philodendron','Monalisa', 'Chlorophytum']
 predictions = [] # empty list for prediction:
