@@ -109,11 +109,13 @@ images_dict = {
 }
 img = Image.open(images_dict[top_species]) # image based on top assimilation species
 st.image(img, caption=top_species,width=400)
+
+# Bottom
+if st.button('Data and Code'):
+    st.markdown("""
+**Here you can find the model that I used to create this prediction and the distribution of data**: [Link](https://drive.google.com/file/d/12GUolcQZv9oWj0vejKZsned0oF5wZa28/view?usp=share_link)
+""")
 # Credit header
-
 st.markdown("""
-**Data and model**: [Link](https://drive.google.com/file/d/12GUolcQZv9oWj0vejKZsned0oF5wZa28/view?usp=share_link)
-
-
 **Credit**: [Yehuda Yungstein](mailto:yehudayu@gmail.com)
 """)
