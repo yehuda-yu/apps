@@ -5,7 +5,6 @@ Created on Wed Dec 21 16:51:13 2022
 @author: Yehuda Yungstein yehudayu@gmail.com
 """
 import streamlit as st
-#@st.cache
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -56,9 +55,9 @@ def read_data(path):
     return df
 
 # Create df for every season:
-path_20 = "C:\downloads_py\Streamlit\Deni_Avdija_Stats_app\Deni_2020-21.csv"
-path_21 = "C:\downloads_py\Streamlit\Deni_Avdija_Stats_app\Deni_2021-22.csv"
-path_22 = "C:\downloads_py\Streamlit\Deni_Avdija_Stats_app\Deni_2022-23_1-32.csv"
+path_20 = "Deni_2020-21.csv"
+path_21 = "Deni_2021-22.csv"
+path_22 = "Deni_2022-23_1-32.csv"
 
 df_2020 = read_data(path_20)
 df_2021 = read_data(path_21)
