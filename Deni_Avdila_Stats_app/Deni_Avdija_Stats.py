@@ -96,7 +96,8 @@ st.dataframe(df)
 columns1 = df.columns[3:]
 selected_column1 = st.selectbox("Select parameter", columns1,key="4")
 # Create a line plot
-chart = st.line_chart(data =df, x='DATE',y=selected_column1)
+#chart = st.line_chart(data =df, x='DATE',y=selected_column1)
+chart = st.line_chart(df[elected_column1])
 # Rolling average:
 rolling = st.slider('Rolling Avg value',1, 10, 1)
 chart = st.line_chart(df[selected_column1].rolling(rolling).mean())
