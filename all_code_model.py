@@ -119,3 +119,4 @@ if st.button('Data and Code'):
 st.markdown("""
 **Credit**: [Yehuda Yungstein](mailto:yehudayu@gmail.com)
 """)
+st.balloons()
